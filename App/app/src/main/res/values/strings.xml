@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PushScreen</string>
+    
+    <string name="channel_name">PushScreen</string>
+</resources>
