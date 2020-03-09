@@ -202,13 +202,13 @@ public class MediaStream extends Service implements LifecycleObserver {
 
     public void pushScreen(final int resultCode, final Intent data, final String ip, final String port, final String id) {
         if (resultCode != Activity.RESULT_OK) {
-            pushingScreenLiveData.postValue(new PushingState("", -3003, "用户取消", false));
-            pushingScreenLiveData.postValue(new PushingState("", 0, "未开始", false));
+            pushingScreenLiveData.postValue(new PushingState("", -3003, "用户取消", true));
+            pushingScreenLiveData.postValue(new PushingState("", 0, "未开始", true));
             return;
         }
         stopStream();
         if (TextUtils.isEmpty(ip) || TextUtils.isEmpty(port) || TextUtils.isEmpty(id)) {
-            pushingScreenLiveData.postValue(new PushingState("", -3002, "参数异常", false));
+            pushingScreenLiveData.postValue(new PushingState("", -3002, "参数异常", true));
             return;
         }
 
@@ -224,13 +224,12 @@ public class MediaStream extends Service implements LifecycleObserver {
                     PushScreenService.MyBinder binder = (PushScreenService.MyBinder) service;
                     pushScreenService = binder.getService();
                     pushScreenService.startVirtualDisplay(resultCode, data, ip, port, id, pushingScreenLiveData);
-                    pushingScreenLiveData.postValue(new PushingState("", 0, "", true));
                 }
 
                 @Override
                 public void onServiceDisconnected(ComponentName name) {
                     pushScreenService = null;
-                    pushingScreenLiveData.postValue(new PushingState("", 0, "未开始", false));
+                    pushingScreenLiveData.postValue(new PushingState("", 0, "未开始", true));
                 }
             };
             mApplicationContext.bindService(intent, conn, Context.BIND_AUTO_CREATE);
@@ -490,7 +489,7 @@ public class MediaStream extends Service implements LifecycleObserver {
                         msg = ("进程名称长度不匹配");
                         break;
                 }
-                pushingStateLiveData.postValue(new PushingState(url, code, msg, false));
+                pushingStateLiveData.postValue(new PushingState(url, code, msg, true));
             }
         };
 

@@ -1,4 +1,4 @@
-package com.hevin.pushscreen.base
+package com.hevin.pushscreen.state.base
 
 import android.os.Handler
 import android.os.Looper

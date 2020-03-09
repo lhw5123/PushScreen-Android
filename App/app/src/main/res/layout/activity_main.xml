@@ -10,7 +10,7 @@
         android:id="@+id/btnCaptureScreenStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="开始录屏"
+        android:text="开始推流"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,16 +21,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="停止录屏"
+        android:text="停止推流"
         app:layout_constraintEnd_toEndOf="@+id/btnCaptureScreenStart"
         app:layout_constraintStart_toStartOf="@+id/btnCaptureScreenStart"
         app:layout_constraintTop_toBottomOf="@+id/btnCaptureScreenStart" />
 
     <TextView
-        android:id="@+id/tvUrl"
+        android:id="@+id/tvMessage"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:text="@string/pushingScreen_url"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnCaptureScreenStart"
         app:layout_constraintEnd_toEndOf="@+id/btnCaptureScreenStart"
         app:layout_constraintStart_toStartOf="@+id/btnCaptureScreenStart" />

@@ -34,7 +34,6 @@ object NotificationHelper {
     }
 
     fun showForegroundNotification(service: Service) {
-        // 创建 Notification Channel
         val notification = NotificationCompat.Builder(applicationContext, CHANNEL_ID)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .setCategory(Notification.CATEGORY_SERVICE)

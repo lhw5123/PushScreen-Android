@@ -1,4 +1,4 @@
-package com.hevin.pushscreen.base
+package com.hevin.pushscreen.state.base
 
 import android.util.Log
 import android.view.View

@@ -83,3 +83,9 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+App/.idea/.name
+App/.idea/misc.xml
+App/.idea/runConfigurations.xml
+App/.idea/codeStyles/codeStyleConfig.xml
+App/.idea/codeStyles/Project.xml
+App/.idea/inspectionProfiles/Project_Default.xml

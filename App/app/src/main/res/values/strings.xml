@@ -2,4 +2,6 @@
     <string name="app_name">PushScreen</string>
     
     <string name="channel_name">PushScreen</string>
+
+    <string name="pushingScreen_url">推流地址：%s</string>
 </resources>

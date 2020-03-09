@@ -129,17 +129,17 @@ public class PushScreenService extends Service {
         wm.getDefaultDisplay().getMetrics(displayMetrics);
         screenDensity = displayMetrics.densityDpi;
 
-        while (windowWidth > 480) {
-            windowWidth /= 2;
-            windowHeight /= 2;
-        }
-
-        windowWidth /= 16;
-        windowWidth *= 16;
-
-
-        windowHeight /= 16;
-        windowHeight *= 16;
+//        while (windowWidth > 480) {
+//            windowWidth /= 2;
+//            windowHeight /= 2;
+//        }
+//
+//        windowWidth /= 16;
+//        windowWidth *= 16;
+//
+//
+//        windowHeight /= 16;
+//        windowHeight *= 16;
     }
 
     private void startPush() {

@@ -1,6 +1,6 @@
 package com.hevin.pushscreen.state
 
-import com.hevin.pushscreen.base.Store
+import com.hevin.pushscreen.state.base.Store
 
 class AppStore(
     initialState: AppState = AppState()
