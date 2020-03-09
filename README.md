@@ -7,3 +7,7 @@
 > 根据设备的不同，可能需要等待一会儿才会出现 VLC 播放窗口。
 >
 > 目前推流地址固定为：`rtsp://cloud.easydarwin.org:554/stream1.sdp`
+
+## 示例
+
+![image](https://github.com/lhw5123/PushScreen-Android/blob/master/screenshots/screenshots1.gif)
